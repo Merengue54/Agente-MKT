@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Murialdo Content Studio</title>
+    <link rel="stylesheet" href="/content/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Murialdo Content Studio</h1>
+      <p>SaaS interno para produção de conteúdo institucional escolar.</p>
+
+      <form id="content-form">
+        <input name="schoolName" placeholder="Nome da escola" required />
+        <input name="audience" placeholder="Público-alvo" required />
+        <input name="objective" placeholder="Objetivo da campanha" required />
+        <input name="tone" placeholder="Tom de voz" required />
+        <input name="channels" placeholder="Canais (instagram,email,site...)" required />
+        <textarea name="additionalContext" placeholder="Contexto adicional"></textarea>
+        <button type="submit">Gerar conteúdo</button>
+      </form>
+
+      <section>
+        <h2>Resultado</h2>
+        <pre id="result">Aguardando geração...</pre>
+      </section>
+
+      <section>
+        <h2>Histórico</h2>
+        <ul id="history"></ul>
+      </section>
+    </main>
+
+    <script src="/content/app.js" type="module"></script>
+  </body>
+</html>
