@@ -20,6 +20,44 @@ Acesse:
 - Frontend: `http://localhost:3000/content`
 - Health: `http://localhost:3000/api/health`
 
+## Como testar
+> Dica: você pode testar sem chave OpenAI; o sistema usa fallback estruturado automaticamente.
+
+### 1) Teste automatizado (unitário)
+```bash
+npm test
+```
+
+### 2) Teste rápido da API (manual)
+Com a aplicação rodando (`npm run dev`), execute:
+
+```bash
+curl -s http://localhost:3000/api/health
+```
+
+```bash
+curl -s -X POST http://localhost:3000/api/content/generate \
+  -H "Content-Type: application/json" \
+  -d '{
+    "schoolName": "Colégio Murialdo",
+    "audience": "Famílias com filhos no ensino fundamental",
+    "objective": "Captação de matrículas",
+    "tone": "Institucional acolhedor",
+    "channels": ["instagram", "email"],
+    "additionalContext": "Campanha de inverno"
+  }'
+```
+
+```bash
+curl -s http://localhost:3000/api/history
+```
+
+### 3) Teste via interface
+1. Abra `http://localhost:3000/content`.
+2. Preencha o formulário e clique em **Gerar conteúdo**.
+3. Valide se o JSON aparece em **Resultado**.
+4. Confirme se uma nova entrada aparece em **Histórico**.
+
 ## Endpoints
 ### `POST /api/content/generate`
 Gera e salva conteúdo.
