@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f6fb;
+  color: #10203a;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+form {
+  display: grid;
+  gap: 8px;
+  margin: 20px 0;
+}
+
+input,
+textarea,
+button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccd5e0;
+}
+
+button {
+  background: #234ea0;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+pre {
+  background: #0c1424;
+  color: #d6e2ff;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+#history {
+  padding-left: 18px;
+}
